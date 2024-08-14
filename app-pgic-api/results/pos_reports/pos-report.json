@@ -1,0 +1,60 @@
+{
+
+  data: ['{"Date":"2020-05-01","State":"Karnataka","City":"Bangalore","Segment":"Fabric Care","Product":"Tide","Customers":973,"Transaction":973,"Units Sold":1716,"Revenue":205920,"Av Customer Spend":211.6341212744}', '{"Date":"2020-05-02","State":"Karnataka","City":"Bangalore","Segment":"Fabric Care","Product":"Tide","Customers":881,"Transaction":881,"Units Sold":2046,"Revenue":245520,"Av Customer Spend":278.6833144154}', '{"Date":"2020-05-03","State":"Karnataka","City":"Bangalore","Segment":"Fabric Care","Product":"Tide","Customers":1131,"Transaction":1131,"Units Sold":2077,"Revenue":249240,"Av Customer Spend":220.3713527851}', '{"Date":"2020-05-04","State":"Karnataka","City":"Bangalore","Segment":"Fabric Care","Product":"Tide","Customers":867,"Transaction":867,"Units Sold":1594,"Revenue":191280,"Av Customer Spend":220.6228373702}', '{"Date":"2020-05-05","State":"Karnataka","City":"Bangalore","Segment":"Fabric Care","Product":"Tide","Customers":1098,"Transaction":1098,"Units Sold":2118,"Revenue":254160,"Av Customer Spend":231.4754098361}', '{"Date":"2020-05-06","State":"Karnataka","City":"Bangalore","Segment":"Fabric Care","Product":"Tide","Customers":920,"Transaction":920,"Units Sold":1757,"Revenue":210840,"Av Customer Spend":229.1739130435}', '{"Date":"2020-05-07","State":"Karnataka","City":"Bangalore","Segment":"Fabric Care","Product":"Tide","Customers":848,"Transaction":848,"Units Sold":1854,"Revenue":222480,"Av Customer Spend":262.358490566}', '{"Date":"2020-05-08","State":"Karnataka","City":"Bangalore","Segment":"Fabric Care","Product":"Tide","Customers":1131,"Transaction":1131,"Units Sold":1286,"Revenue":154320,"Av Customer Spend":136.4456233422}', '{"Date":"2020-05-09","State":"Karnataka","City":"Bangalore","Segment":"Fabric Care","Product":"Tide","Customers":892,"Transaction":892,"Units Sold":2206,"Revenue":264720,"Av Customer Spend":296.7713004484}', '{"Date":"2020-05-10","State":"Karnataka","City":"Bangalore","Segment":"Fabric Care","Product":"Tide","Customers":819,"Transaction":819,"Units Sold":1328,"Revenue":159360,"Av Customer Spend":194.5787545788}'],
+
+  totalTransaction: 123456,
+  totalRevenue: 123456,
+  totalUnitsSold: 123,
+  totalAvgCustomerSpend: 123,
+  topFourByUnitsSold: [
+    {
+      "Product":"Tide",
+      "Units Sold":21,
+      "Share Percent" : 11%
+    },
+    {...},
+    {...},
+    {...}
+  ],
+  topFourByCustomers: [
+    {
+      "Product":"Tide",
+      "Customers":118,
+      "Share Percent" : 11%
+    },
+    {...},
+    {...},
+    {...}
+  ],
+  topFourByTransaction: [
+    {
+      "Product":"Tide",
+      "Transaction":2118,
+      "Share Percent" : 11%
+    },
+    {...},
+    {...},
+    {...}
+  ],
+  topFourByRevenue: [
+    {
+      "Product":"Tide",
+      "Revenue":2118,
+      "Share Percent" : 11%
+    },
+    {...},
+    {...},
+    {...}
+  ],
+  topFourByRevenueAvgCusSpends: [
+    {
+      "Product":"Tide",
+      "Av Customer Spend":2118,
+      "Share Percent" : 11%
+    },
+    {...},
+    {...},
+    {...}
+  ]
+
+}

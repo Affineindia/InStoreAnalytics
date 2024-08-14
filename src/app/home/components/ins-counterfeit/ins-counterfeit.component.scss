@@ -1,0 +1,258 @@
+.text {
+    color:#172d87;
+    font-weight: bold;
+    margin-top:30px;
+}
+.header{
+    font-weight: bold;
+    padding-top: 10px;
+    margin-bottom: -2px;
+    padding-left: 10px;
+}
+.smallhorizon{
+  margin-left: 10px;
+  margin-right:10px;
+}
+hr{
+    color:#172d86;
+}
+.select {
+    padding: 0 0 15px 0;
+}
+.selecttag{
+  margin: 3px 12px 9px 12px;
+  width: 90%;
+  font-size: 14px;
+}
+.card {
+
+}
+// .config-icon {
+//   margin: -4px 10px 0px 0 !important;
+//   // padding: 0;
+//   // width: 16%;
+// }
+.age {
+  height: 63px;
+  border: 1px solid black;
+  margin: 20px;
+  width: 90%;
+  margin-left: 21px;
+}
+.gallery {
+  height: 167px;
+  border: 1px solid black;
+  margin: 20px;
+}
+.opts-container {
+  height: calc(100vh - 167px);
+}
+.recepients {
+  margin: 8px;
+}
+.selectedimages {
+  border: 1px solid #cccc;
+  height: 250px;
+  margin: 0 12px;
+}
+.img-thumbnail {
+  cursor: pointer;
+    width: 101px;
+    height: 87px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+}
+.secondcard {
+  margin-bottom: 20px;
+}
+.secondtext{
+    width:100%;
+margin-right:10px;
+margin-bottom: 10px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.detect{
+  background-color: #172d87;
+  color: white;
+  width: 100%;
+  margin: -6px 0px 9px 0px;
+}
+.path{
+  margin: 14px 0 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #7d7d7d;
+}
+.check{
+    margin-top:14px;
+    font-size:24px;
+    color:lightgreen;
+}
+.uploadcard{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0px;
+  box-shadow: none;
+  background-color: #f1f1f1;
+}
+.uploadtext{
+  padding-left: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.choosegallery{
+  margin: 20px 10px 4px 10px;
+  font-size: 14px;
+}
+.selected{
+    max-height: 100%;
+}
+.bottom{
+    padding-bottom: 30px;
+    margin-bottom: 36px;
+}
+.label1{
+  margin-left:10px;
+}
+.counterestimation{
+  margin-left:5px;
+  margin-right:5px;
+  background-color: lightsalmon;
+  margin-bottom: 10px;
+}
+.Gallery{
+  border:1px solid red;
+}
+@media screen and (min-width: 768px) {
+  .detectbutton {
+    margin-top: 188px;
+  }
+}
+
+.labelbox{
+    background-color: lightgrey;
+    margin:10px;
+    margin-top: -5px;
+}
+.labelbox1{
+    background-color: lightpink;
+    margin:10px;
+    margin-top: -5px;
+}
+.text1{
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+.images{
+  margin: 0px;
+  padding: 0px 0 0 5px;
+}
+.result-label {
+  margin: 20px 10px 20px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.result-label1 {
+  margin: -10px 10px 20px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.label-text {
+  margin: 0 0 0 11px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.thirdcard{
+  height: 437px;
+}
+
+
+
+.modal-title{
+  color:#172d87;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -9px;
+  margin-bottom: -16px;
+  margin-left: -16px;
+}
+.modal-header{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.instore{
+  opacity:0.6;
+  margin-left: 2px;
+  font-size: 20px;
+  margin-top: -3px;
+}
+.align-center{
+  margin: 0 auto;
+}
+.cardhorizon{
+  margin:5px 0px 20px 0px
+}
+.heading{
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  margin-top: -15px;
+}
+.heading1{
+  font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    margin-top: -15px;
+    padding-right: 13px;
+}
+.test {
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
+  background-color: #ededf7;
+}
+.rounded-circle > img {
+  width: 100px;
+  height: 100px;
+}
+.cardcolor{
+  background-color: #F0FFF0;
+  margin-top: -8px;
+  cursor: pointer;
+}
+.modal-footer{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.continue{
+  background: #172d86;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: -10px;
+  margin-bottom: -2px;
+  margin-top: -3px;
+}
+.middlehorizon{
+  margin-top: 22px;
+}
+
+.fake{
+      border: 2px solid #FF0000;
+}
+
+.load{
+  padding-left: 5px;
+  padding-top: 10px;
+  font-size: 10px;
+  margin-top: -8px;
+}

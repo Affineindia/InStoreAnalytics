@@ -1,0 +1,21 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    background-color: #e9ecef;
+
+    span.align-left {
+      margin: 10px 0;
+      font-size: 12px;
+      float: left;
+    }
+
+    span.align-right {
+      margin: 10px 0;
+      font-size: 11px;
+      text-align: right;
+      float: right;
+    }
+}

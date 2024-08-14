@@ -1,0 +1,375 @@
+.container.ins-pos {
+  .sub-header {
+    color: #172d87;
+    .config-icon {
+      margin: 8px 10px 0 0;
+    }
+  }
+
+  .text1 {
+    margin: 10px 0 0 !important;
+    font-size: 16px;
+    color: #172d87;
+    font-weight: bold;
+  }
+  .buttons {
+    .btn {
+      margin: 8px 10px 0 0;
+      border-radius: 0;
+      font-size: 10px;
+      font-weight: bold;
+    }
+    .btn.upload {
+      color: #fff;
+      background-color: #172d87;
+    }
+    .btn.reports {
+      color: #5f5f5f;
+      background-color: #b8c4d0;
+    }
+    .btn.reports:hover {
+      color: #fff;
+      background-color: #172d87;
+    }
+  }
+  hr {
+    margin: 6px 0 10px 0;
+  }
+  // .config-icon {
+  //   margin: 8px 10px 0px 0 !important;
+  //   // padding: 0;
+  //   // width: 16%;
+  // }
+  .card.source img {
+    min-height: 337px;
+    padding: 0 10px 10px;
+  }
+  .card.result {
+    min-height: 350px;
+  }
+}
+
+.card.source {
+  min-height: 404px;
+}
+.reports {
+  margin-left: 10px;
+}
+.label {
+  font-weight: bold;
+  margin-left: 10px;
+}
+.cardsize {
+  height: 350px;
+  width: 90%;
+  padding-top: 72px;
+}
+.viewimage {
+  padding-top: 128px;
+  text-align: center;
+}
+.recepients {
+  width: 100%;
+  margin-top: 5px;
+}
+.uploads,
+.process,
+.preview {
+  margin-top: 30px;
+}
+.previewbody {
+  height: 350px !important;
+}
+.test {
+  width: 50px;
+  height: 70px;
+  background-color: yellow;
+}
+.check {
+  margin-top: 14px;
+  font-size: 24px;
+  color: lightgreen;
+}
+.uploadcard {
+  margin-left: 10px;
+  .container {
+    margin-top: 20px;
+  }
+  .text {
+    color: #172d86;
+    font-weight: bold;
+  }
+  .horizontal {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .reports {
+    margin-left: 10px;
+  }
+  .label {
+    font-weight: bold;
+    margin-left: 16px;
+  }
+  .cardsize {
+    height: 350px;
+    width: 90%;
+    padding-top: 72px;
+  }
+  .viewimage {
+    padding-top: 128px;
+    text-align: center;
+  }
+  .uploads,
+  .process,
+  .preview {
+    margin-top: 30px;
+  }
+  .previewbody {
+    height: 350px !important;
+  }
+  .test {
+    width: 50px;
+    height: 70px;
+    background-color: yellow;
+  }
+  .check {
+    margin-top: 18px;
+    font-size: 24px;
+    color: green;
+  }
+  .uploadcard {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+  }
+  .uploadtext1 {
+    padding-left: 10px;
+  }
+  .header {
+    font-weight: bold;
+    padding-top: 12px;
+    margin-bottom: -2px;
+    margin-left: 10px;
+    padding-left: 5px;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    // margin-top: 20px;
+    // margin-bottom: 0px;
+  }
+  .recepients {
+    margin: 10px;
+  }
+  //   .source{
+  //     height: 400px;
+  //       }
+  .img-thumbnail {
+    cursor: pointer;
+    width: 140px;
+    height: 112px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+  }
+  //   @media screen and (min-width:768px){
+  //     .processbutton{
+  //         margin-top: 188px;
+  //     }
+  //   }
+  //   .text{
+  //     text-align:center;
+  // }
+  .reports {
+    margin-left: 10px;
+  }
+  .buttons {
+    margin-bottom: 20px;
+    // margin-top: 30px;
+  }
+  .selectmenu {
+    margin-bottom: 20px;
+  }
+  .card-body {
+    padding-top: 50px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+  }
+  .card {
+    margin-bottom: 10px;
+  }
+  .trendchart,
+  .customertrend,
+  .product {
+    height: 320px;
+  }
+  .products {
+    height: 200px;
+  }
+  .graph {
+    height: 400px;
+  }
+  .trend {
+    margin-top: 85px;
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+  .margin {
+    padding: 0px;
+  }
+  .reportstart {
+    padding: 20px;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: red;
+  }
+  .carousel slide {
+    margin-top: 25px;
+  }
+  .detect {
+    margin-left: -8px;
+    margin-bottom: 35px;
+    width: 100%;
+    background-color: #172d87;
+  }
+  .bighorizon {
+    margin-top:0px;
+}
+  .upload {
+    background-color: grey;
+  }
+  margin-right: 10px;
+  margin-top: 0px;
+}
+.uploadtext1 {
+  padding-left: 10px;
+}
+.header {
+  font-weight: bold;
+  font-weight: bold;
+  padding-top: 10px;
+  margin-bottom: -2px;
+  padding-left: 10px;
+}
+.recepients {
+  margin: 10px;
+}
+//   .source{
+//     height: 400px;
+//       }
+.img-thumbnail {
+  cursor: pointer;
+  width: 104px;
+  height: 105px;
+  margin-left: 9px;
+  margin-bottom: 10px;
+}
+//   @media screen and (min-width:768px){
+//     .processbutton{
+//         margin-top: 188px;
+//     }
+//   }
+
+//   .text{
+//     text-align:center;
+// }
+.reports {
+  margin-left: 10px;
+}
+
+.selectmenu {
+  margin-bottom: 20px;
+}
+.card-body {
+  padding-top: 50px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+.card {
+  margin-bottom: 10px;
+}
+.trendchart,
+.customertrend,
+.product {
+  height: 320px;
+}
+.products {
+  height: 200px;
+}
+.graph {
+  height: 400px;
+}
+.trend {
+  margin-top: 85px;
+  padding-left: 43px;
+  padding-right: 43px;
+}
+.margin {
+  padding: 0px;
+}
+.reportstart {
+  padding: 20px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: red;
+}
+.carousel slide {
+  margin-top: 25px;
+}
+.detect {
+  margin-left: -8px;
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: #172d87;
+}
+.bighorizon {
+  margin-top: 0px;
+}
+.upload {
+  background-color: grey;
+}
+
+.images {
+  margin-left: 0px;
+}
+
+.uploadcard{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0px;
+  box-shadow: none;
+  background-color: #f1f1f1;
+}
+.uploadtext{
+  padding-left: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.choosegallery{
+  margin: 20px 10px 4px 10px;
+  font-size: 14px;
+}
+.path{
+  margin: 14px 0 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #7d7d7d;
+}
+.disabled {
+  cursor: not-allowed;
+}
+.label-text {
+  margin: 0 0 0 2px;
+    padding: 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+.secondtext{
+  margin-top: -18px;
+}
+.load{
+  padding-left: 10px;
+  padding-top:10px;
+  font-size: 10px;
+}

@@ -1,0 +1,179 @@
+<div class="container section">
+  <h5 class="text">
+    COUNTERFEIT PRODUCT DETECTION
+    <i class="fa fa-info-circle info-icon" title="Identification of counterfeit products in stores using AI based image recognition solution"></i>
+    <i class="fa config-icon" [ngClass]="showConfig ? 'active' : null" (click)="toggleConfig()">Config</i>
+  </h5>
+  <hr>
+  <div class="row" *ngIf="!showConfig">
+    <div class="col-md-3">
+      <div class="card select">
+        <p class="header">Store & Product </p>
+        <hr class="smallhorizon">
+        <label class="label-text">Store :</label>
+        <select class="form-control selecttag" name="store" (change)="selectstore($event.target.value)" required>
+          <option>-- Select A Store --</option>
+          <option value="1">Store 1</option>
+          <option value="2">Store 2</option>
+        </select>
+        <label class="label-text">Product :</label>
+        <select *ngIf="selStore !== 1 ||selStore !== 2" class="form-control selecttag" [hidden]="selStore == 1 ||selStore == 2" name="businessType" >
+          <option>-- Select A Product --</option>
+        </select>
+        <select *ngIf="selStore == 1" class="form-control selecttag" name="businessType" (change)="selectproduct($event.target.value)" required>
+          <option>-- Select A Product --</option>
+          <option value="Tide">Tide</option>
+        </select>
+        <select *ngIf="selStore == 2" class="form-control selecttag" name="businessType" (change)="selectproduct($event.target.value)" required>
+          <option>-- Select A Product --</option>
+          <option value="Head & Shoulders">Head & Shoulders</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="card secondcard">
+        <p class="header">Select An Image</p>
+        <hr class="smallhorizon">
+        <p class="uploadtext font-weight-bold">Upload an Image</p>
+        <div class="card uploadcard">
+          <div class="row">
+            <div class="col-md-2">
+              <button class="btn btn-sm btn-secondary recepients disabled"
+                [disabled]="(uploads == false) ? 'disabled': null">UPLOAD</button>
+            </div>
+            <div class="col-md-6 offset-md-1">
+              <p class="path">No file chosen</p>
+              <!-- <p *ngIf="path" class="path">{{images | slice:25}}</p> -->
+            </div>
+          </div>
+        </div>
+
+
+        <p class="choosegallery font-weight-bold">or Choose from Gallery</p>
+        <div class="row images">
+          <div *ngFor="let item of filterdata; let i = index;">
+            <img src="{{item.path}}" class="img-thumbnail" id="myImg" alt="{{item.name}}" [ngClass]="i == selImgInd ? 'active' : null" [ngClass]="item.state == 'Fake'? 'fake': 'null'" (click)="selectimage(i)">
+          </div>
+
+          <div class="col-md-12" width="100%" style="margin: 0;padding: 0 11px 0 7px;">
+            <div>
+              <p class="load">Loading images may take some time</p>
+              </div>
+            <button class="btn btn-primary col-md-12 detect" (click)="process()"
+              [disabled]="(processing == false) ? 'disabled': null">DETECT COUNTERFEITS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card thirdcard">
+        <p class="header">Counterfeit Identification</p>
+        <hr class="smallhorizon">
+        <p class="uploadtext font-weight-bold">Selected Image</p>
+        <div class="selectedimages">
+          <img class="card-img-top selected img-fluid" src="{{uploadedimage}}" alt="">
+
+        </div>
+        <p class="result-label">Is Counterfeit Product ? {{ responseYN }}</p>
+        <p class="result-label1">Counterfeit Probability : {{ responseText }}</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Button to Open the Modal -->
+  <button type="button" #landingButton class="btn btn-primary hidden d-none" data-toggle="modal" data-target="#myModal">
+  Button
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">SELECT TO CONTINUE</h4>
+        </div>
+
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h4 class="instore">IN STORE ANALYTICS</h4>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card cardcolor" (click)="navigateTo('/ins-counterfeit')" data-dismiss="modal">
+                <div class="test rounded-circle align-center">
+                  <img src="./assets/icons/icn_counerfied_detection.png" alt="Page 1">
+                </div>
+                <hr class="cardhorizon">
+                <p class="heading">COUNTERFEIT DETECTION</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card cardcolor"  (click)="navigateTo('/ins-traffic')" data-dismiss="modal">
+                <div class="test rounded-circle align-center">
+                  <img src="./assets/icons/icn_store_traffic_analytics.png" alt="Page 1">
+                </div>
+                <hr class="cardhorizon">
+                <p class="heading">STORE TRAFFIC ANALYTICS</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card cardcolor"  (click)="navigateTo('/ins-pos')" data-dismiss="modal">
+                <div class="test rounded-circle align-center">
+                  <img src="./assets/icons/icn_estimated_pos_throughput.png" alt="Page 1">
+                </div>
+                <hr class="cardhorizon">
+                <p class="heading">ESTIMATING POS THROUGHPUT</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card cardcolor" (click)="navigateTo('/ins-shelf')" data-dismiss="modal">
+                <div class="test rounded-circle align-center">
+                  <img src="./assets/icons/icn_shelf_invenotry_management.png" alt="Page 1">
+                </div>
+                <hr class="cardhorizon">
+                <p class="heading">SHELF INVENTORY MONITORING</p>
+              </div>
+            </div>
+          </div>
+          <!-- <hr class="middlehorizon">
+          <h4 class="instore">MANUFACTURING EXCELLENCE</h4>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card cardcolor" (click)="navigateTo('/man-corrosion')" data-dismiss="modal">
+                <div class="test rounded-circle align-center">
+                  <img src="./assets/icons/icn_quality_assurance.png" alt="Page 1">
+                </div>
+                <hr class="cardhorizon">
+                <p class="heading1">QUALITY ASSURANCE</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card cardcolor" (click)="navigateTo('/man-vibrate')" data-dismiss="modal">
+                <div class="test rounded-circle align-center">
+                  <img src="./assets/icons/icn_predictive_maintainance.png" alt="Page 1">
+                </div>
+                <hr class="cardhorizon">
+                <p class="heading">PREDICTIVE MAINTENANCE</p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary continue" data-dismiss="modal">CONTINUE</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<app-counter-config *ngIf="showConfig"></app-counter-config>

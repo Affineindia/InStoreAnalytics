@@ -1,0 +1,59 @@
+<div class="container section">
+  <div class="row">
+    <div class="col-auto mr-auto sub-header">
+      <h5 class="text1">VIBRATION ANALYSIS
+        <i class="fa fa-info-circle info-icon" title="Identifying operational anomaly from sound or acoustic profile recorded from production machinery"></i>
+      </h5>
+    </div>
+    <div class="col-auto sub-header buttons align-self-end">
+      <button class="btn btn-sm upload"routerLink="/man-vibrate">Single Acoustic Profile</button>
+      <button class="btn  btn-sm reports "routerLink="/man-vibrate-multi" >Multiple Acoustic Profile</button>
+      <!-- <i class="fa fa-cogs config-icon"></i> -->
+      <i class="fa config-icon" [ngClass]="showConfig ? 'active' : null" (click)="toggleConfig()">Config</i>
+
+    </div>
+  </div>
+    <hr class="bighorizon">
+</div>
+
+<div class="container1" *ngIf="!showConfig">
+  <div class="row">
+            <div class="col-md-12"  *ngFor="let item of audioList; let i = index;">
+              <figure>
+                <audio
+                  title="{{item.name}}"
+                  id="myaudio"
+                  controls
+                  class="col-md-3 audio"
+                  src="{{item.path}}"
+                  (play)="selectimage(i)"
+                  (pause)="stoped(i)">
+                </audio>
+                <label
+                  style="padding-top: 60px;padding-left: 20px;"
+                  >{{item.name}}</label>
+
+              </figure>
+              <!-- <div id="loader"></div> -->
+              <div class="col-md-12 row" >
+                <div class="col-md-3" *ngIf="item.dest">
+                  <img id="imgg" class="chart "  src="{{item.dest}}">
+                </div>
+                <div class="col-md-3" *ngIf="item.diff">
+                  <img id="imgg" class="chart "  src="{{item.diff}}">
+                </div>
+                <div class="col-md-3" *ngIf="DataResult">
+                  <div id="{{item.name}}" class="chart"></div>
+                  </div>
+                <div class="col-md-3" *ngIf="item.amp">
+                  <img id="imgg" class="chart "  src="{{item.amp}}">
+                </div>
+
+            </div>
+
+        </div>
+      </div>
+
+
+    </div>
+      <app-counter-config *ngIf="showConfig"></app-counter-config>

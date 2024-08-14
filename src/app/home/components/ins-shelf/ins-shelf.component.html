@@ -1,0 +1,112 @@
+<div class="container section">
+    <h5 class="text">SHELF INVENTORY MONITORING
+        <i class="fa fa-info-circle info-icon" title="AI based real time shelf inventory monitoring using CCTV camera video feeds"></i>
+        <i class="fa config-icon" [ngClass]="showConfig ? 'active' : null" (click)="toggleConfig()">Config</i>
+  </h5>
+    <hr>
+    <div class="row" *ngIf="!showConfig">
+        <!-- <div class="col-md-4">
+            <div class="card">
+                <p class="header">SHELF1</p>
+                <hr class="horizon">
+                <video class="video1" controls="allowControls" id="myVideo1" autoplay playsinline>
+                    <source src="../../../../assets/Video/coke_video_output.mp4" type="video/mp4">
+                </video>
+                <p class="shelftext header">SHELF INVENTORY</p>
+                <div class="row tablemargin">
+                    <table class="table table-sm table-bordered ">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th class="tableheader">2s</th>
+                                <th class="tableheader">4s</th>
+                                <th class="tableheader">6s</th>
+                                <th class="tableheader">8s</th>
+                                <th class="tableheader">10s</th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                            <tr>
+                                <td class="tabledata" >{{array1.T1}}</td>
+                                <td class="tabledata" >{{array1.T2}}</td>
+                                <td class="tabledata" >{{array1.T3}}</td>
+                                <td class="tabledata" >{{array1.T4}}</td>
+                                <td class="tabledata" >{{array1.T5}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <p class="header">SHELF2</p>
+                <hr class="horizon">
+                <video class="video1" controls id="myVideo2" autoplay>
+                    <source src="../../../../assets/Video/maggi_video_output.mp4" type="video/mp4">
+                </video>
+                <p class="shelftext header">SHELF INVENTORY</p>
+                <div class="row tablemargin">
+                    <table class="table table-sm table-bordered">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th class="tableheader">2s</th>
+                                <th class="tableheader">4s</th>
+                                <th class="tableheader">6s</th>
+                                <th class="tableheader">8s</th>
+                                <th class="tableheader">10s</th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                            <tr>
+                              <td class="tabledata">{{array2.T1}}</td>
+                              <td class="tabledata">{{array2.T2}}</td>
+                              <td class="tabledata">{{array2.T3}}</td>
+                              <td class="tabledata">{{array2.T4}}</td>
+                              <td class="tabledata">{{array2.T5}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div> -->
+
+
+        <div class="col">
+            <div class="card">
+                <p class="header">SHELF 1</p>
+                <button class="btn btn-primary btn-sm offset-md-10 pull-right" *ngIf="stopvideo" controls onended="videoEnded()" (click)="playPause()">Play</button>
+                <button class="btn btn-primary btn-sm offset-md-10 pull-right" *ngIf="!stopvideo" controls onended="videoEnded()" (click)="playPause()">Stop</button>
+
+                <hr class="horizon">
+                <video class="video1" id="myVideo1" autoplay preload="atuo" muted>
+                    <source src="./assets/Video/output.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <p class="header">SHELF INVENTORY</p>
+                <hr class="horizon">
+                <div class="table-container">
+                  <table class="table table-sm table-bordered">
+                      <tbody >
+                          <tr>
+                            <th *ngFor="let th of tableHeaderTh">{{th}}</th>
+                          </tr>
+                          <tr *ngFor="let tr of tableBodyTr; let i = index;">
+                              <td >{{tr}}</td>
+                              <td *ngFor="let td of tableBodyTd[i]">{{td}}</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<app-counter-config *ngIf="showConfig"></app-counter-config>

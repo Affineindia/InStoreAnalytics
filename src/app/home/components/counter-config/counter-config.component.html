@@ -1,0 +1,115 @@
+<div class="container">
+    <h5 class="text">COUNTERFEIT IDENTIFICATION</h5>
+    <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <!-- <form class="example">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form> -->
+            <form class="example">
+            <div class="form-group">
+              <label class="labelname1">Enter Project Name</label>
+              <input type="text" class="form-control textname" required readonly>
+            </div>
+            <div class="form-group group">
+              <label class="labelname">Enter Model Name</label>
+              <input type="text" class="form-control textname" required readonly>
+            </div>
+            <div class="form-group group buttonwrapper">
+              <label class="labelname">Upload Image of Real Product</label>
+              <input type="text" class="form-control textname" required readonly>
+                <button class=" btn btn-primary go pull-right btn-sm">Upload</button>
+            </div>
+            <div class="form-group group">
+              <label class="labelname">Upload Image of Fake Product</label>
+              <input type="text" class="form-control textname" required readonly>
+              <button class=" btn btn-primary go pull-right btn-sm">Upload</button>
+            </div>
+            <div class="form-group group">
+              <label class="labelname">Select Model Type</label>
+              <input type="text" class="form-control textname" required readonly>
+            </div>
+            <div class="form-group">
+              <label class="labelname2">Adjust Test Statergy</label>
+              <br>
+              <input type="range" min="1" max="100" value="50" class="slider" id="myinput">
+            </div>
+            <button class="btn btn-primary col-md-12 train">TRAIN</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="names">
+            <p class="real">Real</p>
+            <p class="fake">Fake</p>
+            <p class="secondreal">Real</p>
+            </div>
+            <div class="row bigbox">
+              <div class="boxes"></div>
+              <div class="boxes"></div>
+              <div class="boxes"></div>
+              <div class="boxes"></div>
+            </div>
+            <p class="secondfake">Fake</p>
+            <p class="predicted">Predicted</p>
+            <p class="actual">Actual</p>
+            <hr class="secondhorizon">
+            <form>
+              <div class="form-group">
+                <label class="labelname2">Enter End Points</label>
+                <input type="text" class="form-control textnameend" required readonly>
+              </div>
+              <button class="btn btn-primary col-md-12 deploy">DEPLOY</button>
+              </form>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <p class="header">Project Name: Project 1</p>
+            <hr class="horizon">
+            <!-- <table class="table table-bordered cus-table aa-table table1" >
+              <thead class="thead-inverse">
+                <tr>
+                  <th>Model Name</th>
+                  <th>Model Data</th>
+                  <th>F1 Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ng-template>
+                  <tr *ngFor="let item of imagesList">
+                      <td>{{item.name}}</td>
+                      <td>{{item.metdata}}</td>
+                      <td>{{item.source}}</td>
+                  </tr>
+                </ng-template>
+              </tbody>
+            </table> -->
+            <div class="experimentbox">
+            <p class="experiment">List of Experiments</p>
+            </div>
+            <table class="table table-bordered cus-table aa-table table1" id="data">
+              <thead class="thead-inverse">
+                  <tr>
+                    <th class="firstth">Model Name</th>
+                    <th class="secondtd">Model Data</th>
+                    <th class="thirdth">F1 Score</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let item of modeldata">
+                      <td>{{item.modelname}}</td>
+                      <td class="secondtd">{{item.metdata}}</td>
+                      <td class="secondtd">{{item.source}}</td>
+                  </tr>
+              </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>

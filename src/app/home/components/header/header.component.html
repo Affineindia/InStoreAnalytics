@@ -1,0 +1,67 @@
+<header>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-auto logo-cont">
+        <img class="logo" src="./../assets/logo.png" alt="" routerLink="/ins-counterfeit">
+      </div>
+      <div class="col header-text-parent">
+        <p class="header-text">In-store Analytics</p>
+      </div>
+      <div class="col-md-auto mr-auto">
+        <nav>
+          <ul class="nav justify-content-end nav nav-pills">
+            <!-- <li class="nav-item main-nav">
+              <a class="nav-link" routerLink="/ins-counterfeit" [ngClass]="isInstore() ? 'active' : null">Instore Analytics</a>
+            </li>
+            <li class="nav-item main-nav">
+              <a class="nav-link " routerLink="/man-corrosion" [ngClass]="!isInstore() ? 'active' : null">Manufacturing Excellence</a>
+            </li> -->
+            <li class="nav-item main-nav">
+              <a class="nav-link" routerLink="/login">Logout</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bs-example sub-nav" *ngIf="isInstore()">
+    <nav class="navbar navbar-expand-md navbar-light">
+
+        <div class="container">
+
+          <div class="collapse navbar-collapse">
+              <div class="navbar-nav navbox">
+                  <a (click)="navigateTo('/ins-counterfeit')" class="nav-item nav-link" [ngClass]="isActiveLink('/ins-counterfeit') ? 'active' : null">COUNTERFEIT DETECTION <span style="margin-left:15px;">|</span></a>
+                  <a (click)="navigateTo('/ins-traffic')" class="nav-item nav-link" [ngClass]="isActiveLink('/ins-traffic') ? 'active' : null">STORE TRAFFIC ANALYTICS <span style="margin-left:15px;">|</span></a>
+                  <a (click)="navigateTo('/ins-pos')" class="nav-item nav-link" [ngClass]="isActiveLink('/ins-pos') || isActiveLink('/ins-report') ? 'active' : null">ESTIMATING POS THROUGHPUT <span style="margin-left:15px;">|</span></a>
+                  <a (click)="navigateTo('/ins-shelf')" class="nav-item nav-link" [ngClass]="isActiveLink('/ins-shelf') ? 'active' : null">SHELF INVENTORY MONITORING</a>
+              </div>
+          </div>
+
+        </div>
+
+    </nav>
+  </div>
+
+  <div class="bs-example sub-nav" *ngIf="!isInstore()">
+    <nav class="navbar navbar-expand-md navbar-light">
+
+      <div class="container">
+
+        <div class="collapse navbar-collapse">
+          <div class="navbar-nav navbox">
+            <a (click)="navigateTo('/man-corrosion')" class="nav-item nav-link" [ngClass]="isActiveLink('/man-corrosion') ? 'active' : null">COMPUTER VISION <span style="margin-left:15px;">|</span></a>
+            <a (click)="navigateTo('/man-vibrate')" class="nav-item nav-link" [ngClass]="isActiveLink('/man-vibrate') || isActiveLink('/man-vibrate-multi') ? 'active' : null">SOUND CLASSIFICATION</a>
+          </div>
+        </div>
+
+      </div>
+
+    </nav>
+  </div>
+
+</header>

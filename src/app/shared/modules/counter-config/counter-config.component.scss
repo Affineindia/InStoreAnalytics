@@ -1,0 +1,328 @@
+.config-container {
+  .card {
+    min-height: 440px;
+    .header {
+      padding: 10px 0 0 10px;
+      margin: 0;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .horizon{
+      margin: 5px 10px 10px;
+    }
+  }
+  .text {
+      color:#172d87;
+      font-weight: bold;
+      margin-top:30px;
+  }
+  .textname{
+      padding-left: 7px;
+      margin-left: 10px;
+      width: 95%;
+      margin-top: -7px;
+    }
+    .textnameend{
+      padding-left: 7px;
+      margin-left: 10px;
+      width: 95%;
+    }
+    .labelname{
+      margin-left:10px;
+      margin-top:5px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .labelname1{
+      margin-left:10px;
+      margin-top:6px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .labelname2{
+      font-weight: bold;
+      margin-left:10px;
+      font-size: 12px;
+    }
+    .group{
+      margin-top:-16px;
+    }
+    .train{
+      width:95%;
+      margin-left:10px;
+      margin-bottom: 10px;
+      background-color: #172d86;
+    }
+    .deploy{
+      width:95%;
+      margin-left:10px;
+      margin-bottom: 10px;
+      background-color: #172d86;
+    }
+    .slidecontainer {
+      width: 100%;
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      width: 95%;
+      height: 15px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+      margin-left:10px;
+    }
+
+    .slider:hover {
+      opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: solid 1px #82CFD0;
+      background: #172d86;
+      cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #4CAF50;
+      cursor: pointer;
+    }
+
+    table{
+      margin-left: 10px;
+      margin-right:10px;
+      width:95%;
+    }
+    .boxes{
+      background-color: #ccc;
+        height: 89px;
+        width: 47%;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+    .bigbox{
+      width: 85%;
+      margin-left: 26px;
+      margin-top: -27px;
+    }
+    .secondhorizon{
+      color: #172d86;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: -188.5px;
+    }
+    .real{
+      margin-top:39px;
+      margin-left: 76px;
+      display: inline;
+      float:left;
+      font-size: 12px;
+        font-weight: 500;
+    }
+    .anomalies.real {
+        margin-top: 39px;
+        margin-left: 63px;
+        margin-bottom: 0;
+        display: inline;
+        float: left;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .defective.real {
+        margin-top: 39px;
+        margin-left: 63px;
+        margin-bottom: 0;
+        display: inline;
+        float: left;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .fake{
+      margin-left: 122px;
+      margin-top:39px;
+      float:left;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .anomalies.fake {
+        margin-left: 88px;
+        margin-top: 39px;
+        margin-bottom: 0;
+        float: left;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .defective.fake {
+        margin-left: 88px;
+        margin-top: 39px;
+        margin-bottom: 0;
+        float: left;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    @media screen and (min-width: 768px) {
+      .secondreal{
+        margin-top: 120px;
+        margin-left: 293px;
+        transform: rotate(90deg);
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .anomalies.secondreal {
+        margin-top: 83px;
+        margin-left: 270px;
+        margin-bottom: 0;
+        transform: rotate(90deg);
+        font-size: 12px;
+        font-weight: 500;
+        height: 44px;
+        width: 79px;
+      }
+      .defective.secondreal {
+        margin-top: 83px;
+        margin-left: 270px;
+        margin-bottom: 0;
+        transform: rotate(90deg);
+        font-size: 12px;
+        font-weight: 500;
+        height: 44px;
+        width: 79px;
+      }
+      .bigbox{
+        width: 85%;
+        margin-left: 24px;
+        margin-top: -106px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .anomalies.bigbox {
+          width: 85%;
+          margin-left: 24px;
+          margin-top: -77px;
+          font-size: 12px;
+          font-weight: 500;
+      }
+      .defective.bigbox {
+          width: 85%;
+          margin-left: 24px;
+          margin-top: -77px;
+          font-size: 12px;
+          font-weight: 500;
+      }
+      .secondfake{
+        margin-left: 295px;
+        margin-top: -46px;
+        transform: rotate(90deg);
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .anomalies.secondfake {
+          margin-left: 293px;
+          margin-top: -51px;
+          transform: rotate(90deg);
+          font-size: 12px;
+          font-weight: 500;
+          width: 60px;
+      }
+      .defective.secondfake {
+          margin-left: 293px;
+          margin-top: -51px;
+          transform: rotate(90deg);
+          font-size: 12px;
+          font-weight: 500;
+          width: 60px;
+      }
+      .actual{
+        transform: rotate(90deg);
+        margin-left: -312px;
+        margin-top: 166px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+    .predicted{
+      margin-left: 142px;
+      margin-top: 15px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .names{
+      display: inline;
+      float:left;
+    }
+    th{
+      background-color: #cccc;
+      font-size:12px;
+    }
+    .experiment{
+      padding-left: 12px;
+      color: white;
+      background-color: #8a8a8a;
+      font-size: 14px;
+      padding-top: 2px;
+    }
+    table{
+      margin-top: -16px;
+    }
+    .experimentbox{
+      width: 45%;
+      padding-left:10px;
+    }
+    #myinput {
+      background: linear-gradient(to right,#172d86 0%, #172d86 50%, #fff 50%, #fff 100%);
+      border: solid 1px #172d86;
+      border-radius: 8px;
+      outline: none;
+      transition: background 450ms ease-in;
+      -webkit-appearance: none;
+    }
+    #data th {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      text-align: left;
+      background-color: #cccc;
+    }
+    #data td {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      text-align: left;
+      font-size: 12px;
+    }
+    #data .secondtd{
+      text-align: right;
+    }
+    #data .secondtd.view {
+      text-decoration: underline;
+      color: #172d86;
+      text-align: center;
+    }
+    #data .firstth{
+      padding-right: 30px;
+    }
+    #data .thirdth{
+      text-align:center;
+    }
+
+    .go {
+      margin-top: -34px;
+        margin-right: 11px;
+        padding-top: 6px;
+        padding-bottom: 7px;
+        padding-left: 22px;
+        padding-right: 15px;
+        background-color: #172d86;
+        font-size: 11px;
+    }
+
+}

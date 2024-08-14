@@ -1,0 +1,75 @@
+.traffic-container {
+  .text {
+    color: #172d86;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  .textheader {
+    padding: 10px 0 0 10px;
+    margin: 0;
+  }
+  .videos {
+    margin: 0px 0px 8px 12px;
+    video {
+      object-fit: fill;
+      width: 96%;
+      height: 150px;
+    }
+    .col-md-6 {
+      padding: 0;
+    }
+    .subtext {
+      margin: 0px 13px 0px 0px;
+      width: auto;
+      font-size: 13px;
+      font-weight: bold;
+      color: #444;
+      padding: 2px 8px;
+      text-align: right;
+      background-color: #ccc;
+      float: right;
+    }
+    .secondvideo {
+      margin-top: 10px;
+    }
+  }
+
+  // .config-icon {
+  //   margin: -4px 10px 0px 0 !important;
+  //   // padding: 0;
+  //   // width: 16%;
+  // }
+  table {
+    margin: 0 auto;
+    width: 96%;
+    text-align: center;
+    border: none;
+    tr:first-child td {
+      // background-color: green;
+      // color: #fff;
+    }
+  }
+  .table-container {
+      margin: 0 0 15px 0;
+  }
+  .chart-container {
+    margin-bottom: 11px;
+  }
+  .trafficgraph {
+    min-height: 229px;
+    }
+
+}
+.load{
+  padding-left: 7px;
+  padding-top:10px;
+  font-size: 10px;
+}
+.pull-right{
+  margin-top: -25px;
+  background: #172d86;
+  text-align: center;
+}
+button{
+  width: 16%;
+}

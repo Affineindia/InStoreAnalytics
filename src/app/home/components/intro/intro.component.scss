@@ -1,0 +1,13 @@
+.opts-container {
+  height: calc(100vh - 167px);
+}
+@media screen and (max-width:568px){
+  .card {
+    margin-bottom:10px;
+  }
+}
+@media screen and (min-width:1000px) and (max-width:1200px){
+  .instore {
+    padding:13px;
+  }
+}

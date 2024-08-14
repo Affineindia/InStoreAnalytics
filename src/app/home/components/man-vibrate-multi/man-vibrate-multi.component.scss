@@ -1,0 +1,452 @@
+.container {
+  .sub-header {
+    color: #172d87;
+    .config-icon {
+      margin: 8px 10px 0 0;
+    }
+  }
+  .text1 {
+    margin: 10px 0 0 !important;
+    font-size: 16px;
+    color: #172d87;
+    font-weight: bold;
+  }
+  .buttons {
+    .btn {
+      margin: 8px 10px 0 0;
+      border-radius: 0;
+      font-size: 10px;
+      font-weight: bold;
+    }
+    .btn.upload {
+      color: #5f5f5f;
+      background-color: #b8c4d0;
+    }
+    .btn.reports {
+      color: #fff;
+      background-color: #172d87;
+    }
+    .btn.upload:hover {
+      color: #fff;
+      background-color: #172d87;
+    }
+
+
+  }
+  hr {
+    margin: 6px 0 10px 0;
+  }
+  // .config-icon {
+  //   margin: 8px 10px 0px 0 !important;
+  //   // padding: 0;
+  // }
+  .card.source img {
+    min-height: 297px;
+    padding: 0 10px 10px;
+  }
+  .card.result {
+    min-height: 350px;
+  }
+}
+.text1 {
+  color: #172d86;
+  font-weight: bold;
+  margin-top:30px;
+}
+/*search html css*/
+// .btn {
+//   position: absolute;
+//   top: 37%;
+//   left:36%;
+// }
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+.box{
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+
+.pic {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 3px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.pic {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.pic1:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+
+
+input[type="file"] {
+
+}
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  position:absolute;
+  left:4%;
+  top:35%
+
+}
+
+
+table {
+  margin-left: 15%;
+  margin-right: 15%;
+  border-collapse: collapse;
+  width: 50%;
+
+
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  top:50%;
+  width: 80px;
+}
+
+// tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  top:50%;
+}
+
+
+
+
+
+
+.column {
+  float: left;
+  width: 15%;
+  padding: 15px;
+  margin-left:-32px
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container1 {
+ position: relative;
+background-color: white;
+}
+
+
+/* .chart{
+  position: absolute;
+  left:19%;
+
+} */
+.chart {
+  height: 275px;
+  width:300px;
+  margin-right: -14px;
+  vertical-align:middle;
+  border-style: none;
+}
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+
+
+.loader{width:60px;height:60px;background:0 0;border:10px solid transparent;border-top-color:#f56;border-left-color:#f56;border-radius:50%;animation:loader .75s 10 ease forwards}@keyframes loader{100%{transform:rotate(360deg)}}
+
+
+
+
+/* added for loading animation */
+// .modal {
+//             display: none;
+//             position: absolute;
+//             z-index: 1000;
+//             top: 25%;
+//             left: 51%;
+//             height: 100%;
+//             width: 50%;
+//             background: rgba( 255, 255, 255, .8 ),
+//                         url("ajax-loader.gif"),
+//                         50% 50%,
+//                         no-repeat;
+//             }
+        body.loading {
+            overflow: hidden;
+        }
+        body.loading .modal {
+            display: block;
+        }
+/* loading animation ends */
+
+
+
+
+/* for slideshow */
+
+
+/* added for side bar */
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* sidebar ends */
+
+
+
+
+/* heading */
+.hello {
+
+
+
+	font-family:  arial;
+	font-size: 25px;
+
+
+
+  position:relative;
+  left:0%;
+}
+
+.hello1 {
+
+
+
+	font-family:  arial;
+	font-size: 17px;
+
+
+
+  position:relative;
+  left:7%;
+}
+
+.hello2 {
+
+
+
+	font-family:  arial;
+	font-size: 25px;
+
+
+
+  position:relative;
+  left:55%;
+}
+
+.hello3 {
+
+
+
+	font-family:  arial;
+	font-size: 17px;
+
+
+
+  position:relative;
+  left:7%;
+}
+
+.margin {
+  background-color: lightgrey;
+  width: 95%;
+  border: 5px solid green;
+  padding: 10px;
+  margin: 20px;
+  height:90px;
+}
+
+.margin1 {
+  background-color: lightgrey;
+  width: 20%;
+  border: 1px solid blue;
+  padding: 2px;
+  margin: 2px;
+  height:70px;
+}
+/* heading ends */
+
+
+
+
+
+/* centering navbar  */
+.navbar-text{
+  text-align: center;
+  display:inline-block;
+
+}
+
+.idnam{
+  font-family:  arial;
+	font-size: 17px;
+}
+
+
+
+
+/* center line */
+
+body, html { height: 90%; }
+.outer {
+  width: 1px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.inner {
+  position: absolute;
+  width:100%;
+  height: 40%;
+  background: grey;
+  top: 30%;
+  box-shadow: 0px 0px 30px 20px grey;
+}
+
+
+.vl {
+  border-left: 6px solid green;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+html, body {height: 100%; min-height: 100%}
+.vertical-line{
+      width: 1px;
+      background-color: silver;
+      height: 100%;
+      position:absolute;
+      top:28%;
+      left:50%;
+
+      border: 2px ridge silver ;
+      border-radius: 2px;
+    }
+/* center line ends */
+/*search html ends*/
+.greybg{
+  background-color: #006400;
+}
+/*search html ends*/
+.greybg1{
+  background-color: #800000;
+}
+.audio{
+  border-top: 2px solid #ddd;
+border-left: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-bottom: 2px solid #ddd;
+}
+.tdborder{
+    border: 1px solid #000000;
+}
+.defect{
+  width: 155px;
+}

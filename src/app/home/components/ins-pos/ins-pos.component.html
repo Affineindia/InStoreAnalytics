@@ -1,0 +1,115 @@
+<div class="container section ins-pos">
+  <div class="row">
+    <div class="col-auto mr-auto sub-header">
+      <h5 class="text1">
+        ESTIMATING POS THROUGHPUT
+        <i class="fa fa-info-circle info-icon" title="Estimation of PoS throughput by digitizing PoS receipts to gain insights into product affinity & fast & slow-moving products"></i>
+      </h5>
+    </div>
+    <div class="col-auto sub-header buttons align-self-end">
+      <button class="btn btn-sm upload" routerLink="/ins-pos">UPLOAD</button>
+      <button class="btn btn-sm reports" routerLink="/ins-report">REPORTS</button>
+      <!-- <i class="fa fa-cogs config-icon"></i> -->
+      <i class="fa config-icon" [ngClass]="showConfig ? 'active' : null" (click)="toggleConfig()">Config</i>
+      <!-- <i class="fa config-icon">Config</i> -->
+    </div>
+  </div>
+  <hr class="bighorizon">
+</div>
+
+<div class="container"*ngIf="!showConfig">
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="card secondcard">
+        <p class="header">Select an Image</p>
+        <hr>
+        <p class="uploadtext font-weight-bold">Upload an Image</p>
+        <div class="card uploadcard">
+          <div class="row">
+            <div class="col-md-5">
+              <button class="btn btn-sm btn-secondary recepients disabled"
+                [disabled]="(uploads == false) ? 'disabled': null">UPLOAD</button>
+            </div>
+            <div class="col-md-5">
+              <p class="path">No file choosen</p>
+              <!-- <p *ngIf="path" class="path">{{images | slice:25}}</p> -->
+            </div>
+          </div>
+        </div>
+
+        <p class="choosegallery font-weight-bold">or Choose from Gallery</p>
+        <div class="row images">
+          <div *ngFor="let item of imagesList; let i = index;" class="col-md-4">
+            <img src="{{item.path}}" class="img-thumbnail" id="myImg" alt="{{item.name}}" [ngClass]="i == selImgInd ? 'active' : null" (click)="selectimage(i)">
+          </div>
+          <p class="load">Loading images may take some time</p>
+          <div class="col-md-12" width="100%">
+            <button class="btn btn-primary col-md-12 detect" (click)="process()"
+              [disabled]="(processing == false) ? 'disabled': null">CLICK TO PROCESS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card source">
+        <p class="header">Processed Image</p>
+        <hr>
+        <img class="card-img-top" src="{{uploadedimage}}" alt="" style="width:100%">
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card result">
+        <p class="header">Processed Data</p>
+        <hr>
+        <label class="label">Detail</label>
+        <form >
+
+          <div class="form-group col-md-12" >
+              <label class="label-text">Store</label>
+              <input type="text" class="form-control"  value="{{response.Details[0]}}" required readonly>
+          </div>
+          <div class="form-group col-md-12 secondtext" >
+              <label class="label-text">Address</label>
+              <input type="text" class="form-control"  value="{{response.Details[1]}}" required readonly>
+          </div>
+          <div class="form-group col-md-12 secondtext" >
+              <label class="label-text">Contact</label>
+              <input type="text" class="form-control"  value="{{response.Details[2]}}" required readonly>
+          </div>
+          <div class="form-group col-md-12 secondtext">
+             <label class="label-text">Date</label> <input type="text" class="form-control"  value="{{response.TransactionDate}}" required readonly>
+          </div>
+
+          <div class="row">
+           <div>
+             <div class="form-group col-md-12 offset-md-1" >
+                 <label class="label-text">Items</label>
+               </div>
+            <div class="form-group col-md-12 offset-md-1" *ngFor="let item of response.Items" >
+              <input type="text" class="form-control"  value="{{item}}" required readonly>
+            </div>
+            <div class="form-group col-md-12 offset-md-1" >
+              <input type="text" class="form-control"  value="TOTAL" required readonly>
+            </div>
+              </div>
+            <div class="col-md-3">
+              <div class="form-group">  <label class="label-text">Price</label>  </div>
+              <div class="form-group" *ngFor="let cost of response.ItemCost">
+                <input type="text" class="form-control" value="{{cost}}" required readonly>
+              </div>
+                <div class="form-group">
+                <input type="text" class="form-control"  value="{{response.Total}}" required readonly>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-counter-config *ngIf="showConfig"></app-counter-config>

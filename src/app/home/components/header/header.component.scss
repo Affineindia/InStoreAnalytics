@@ -1,0 +1,62 @@
+header {
+  border-bottom: 1px solid #ccc;
+  text-transform: uppercase;
+  background-color: #fff;
+
+  .logo-cont {
+    padding-right: 0px;
+  }
+
+  .header-text-parent {
+    min-height: 70px;
+    .header-text {
+        color: #172d87;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 16px 0 0;
+    }
+  }
+
+  .logo {
+    width: 197px;
+    height: 62px;
+    margin: 3px 10px 0 0px;
+  }
+
+  nav {
+    padding: 16px 0 0;
+  }
+
+  .bs-example.sub-nav nav {
+    padding: 0;
+  }
+  .navbar-nav.navbox {
+    margin-left: -5px;
+  }
+  .navbar-nav.navbox .nav-item {
+    font-size: 12px;
+    color: #c5c5c5;
+    cursor: pointer;
+  }
+  .navbar-nav.navbox .nav-item:hover, .navbar-nav.navbox .nav-item.active {
+    color: #fff;
+  }
+
+  .navbar{
+    background-color: #172d87;
+  }
+
+  li.nav-item.main-nav {
+    margin: 0 5px;
+  }
+  .nav-pills li.nav-item.main-nav a {
+      color: #172d87 !important;
+      font-weight: bold;
+      font-size: 14px;
+  }
+  .nav-pills li.nav-item.main-nav a:hover, .nav-pills li.nav-item.main-nav a.active {
+      color: #fff !important;
+      background-color: #172d87;
+  }
+
+}

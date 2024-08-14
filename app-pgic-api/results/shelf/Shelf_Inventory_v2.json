@@ -1,0 +1,320 @@
+[
+    {
+        "timestamps": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+        ],
+        "data": [
+            [
+                {
+                    "product": "Dixan Liquid Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Dash Liquid Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Dixan Powder Det.",
+                    "count": 2
+                },
+                {
+                    "product": "Ace Powder Det.",
+                    "count": 2
+                },
+                {
+                    "product": "Perlana Powder Det.(1)",
+                    "count": 1
+                },
+                {
+                    "product": "Perlana Powder Det.(2)",
+                    "count": 3
+                },
+                {
+                    "product": "Perlana Liquid Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Purple)",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Blue)",
+                    "count": 3
+                }
+            ],
+            [
+                {
+                    "product": "Dixan Liquid Det.",
+                    "count": 0
+                },
+                {
+                    "product": "Dash Liquid Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Dixan Powder Det.",
+                    "count": 2
+                },
+                {
+                    "product": "Ace Powder Det.",
+                    "count": 2
+                },
+                {
+                    "product": "Perlana Powder Det.(1)",
+                    "count": 1
+                },
+                {
+                    "product": "Perlana Powder Det.(2)",
+                    "count": 3
+                },
+                {
+                    "product": "Perlana Liquid Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Purple)",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Blue)",
+                    "count": 3
+                }
+            ],
+            [
+                {
+                    "product": "Dixan Liquid Det.",
+                    "count": 0
+                },
+                {
+                    "product": "Dash Liquid Det.",
+                    "count": 6
+                },
+                {
+                    "product": "Dixan Powder Det.",
+                    "count": 2
+                },
+                {
+                    "product": "Ace Powder Det.",
+                    "count": 2
+                },
+                {
+                    "product": "Perlana Powder Det.(1)",
+                    "count": 1
+                },
+                {
+                    "product": "Perlana Powder Det.(2)",
+                    "count": 3
+                },
+                {
+                    "product": "Perlana Liquid Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Purple)",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Blue)",
+                    "count": 3
+                }
+            ],
+            [
+                {
+                    "product": "Dixan Liquid Det.",
+                    "count": 0
+                },
+                {
+                    "product": "Dash Liquid Det.",
+                    "count": 6
+                },
+                {
+                    "product": "Dixan Powder Det.",
+                    "count": 2
+                },
+                {
+                    "product": "Ace Powder Det.",
+                    "count": 1
+                },
+                {
+                    "product": "Perlana Powder Det.(1)",
+                    "count": 1
+                },
+                {
+                    "product": "Perlana Powder Det.(2)",
+                    "count": 3
+                },
+                {
+                    "product": "Perlana Liquid Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Purple)",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Blue)",
+                    "count": 3
+                }
+            ],
+            [
+                {
+                    "product": "Dixan Liquid Det.",
+                    "count": 0
+                },
+                {
+                    "product": "Dash Liquid Det.",
+                    "count": 6
+                },
+                {
+                    "product": "Dixan Powder Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Ace Powder Det.",
+                    "count": 0
+                },
+                {
+                    "product": "Perlana Powder Det.(1)",
+                    "count": 1
+                },
+                {
+                    "product": "Perlana Powder Det.(2)",
+                    "count": 3
+                },
+                {
+                    "product": "Perlana Liquid Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Purple)",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Blue)",
+                    "count": 3
+                }
+            ],
+            [
+                {
+                    "product": "Dixan Liquid Det.",
+                    "count": 0
+                },
+                {
+                    "product": "Dash Liquid Det.",
+                    "count": 6
+                },
+                {
+                    "product": "Dixan Powder Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Ace Powder Det.",
+                    "count": 0
+                },
+                {
+                    "product": "Perlana Powder Det.(1)",
+                    "count": 1
+                },
+                {
+                    "product": "Perlana Powder Det.(2)",
+                    "count": 3
+                },
+                {
+                    "product": "Perlana Liquid Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Purple)",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Blue)",
+                    "count": 0
+                }
+            ],
+            [
+                {
+                    "product": "Dixan Liquid Det.",
+                    "count": 2
+                },
+                {
+                    "product": "Dash Liquid Det.",
+                    "count": 6
+                },
+                {
+                    "product": "Dixan Powder Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Ace Powder Det.",
+                    "count": 0
+                },
+                {
+                    "product": "Perlana Powder Det.(1)",
+                    "count": 1
+                },
+                {
+                    "product": "Perlana Powder Det.(2)",
+                    "count": 3
+                },
+                {
+                    "product": "Perlana Liquid Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Purple)",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Blue)",
+                    "count": 0
+                }
+            ],
+            [
+                {
+                    "product": "Dixan Liquid Det.",
+                    "count": 2
+                },
+                {
+                    "product": "Dash Liquid Det.",
+                    "count": 6
+                },
+                {
+                    "product": "Dixan Powder Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Ace Powder Det.",
+                    "count": 0
+                },
+                {
+                    "product": "Perlana Powder Det.(1)",
+                    "count": 1
+                },
+                {
+                    "product": "Perlana Powder Det.(2)",
+                    "count": 3
+                },
+                {
+                    "product": "Perlana Liquid Det.",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Purple)",
+                    "count": 3
+                },
+                {
+                    "product": "Vernel Softner (Blue)",
+                    "count": 0
+                }
+            ]
+        ]
+    }
+]

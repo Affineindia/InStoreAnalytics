@@ -1,0 +1,148 @@
+<div class="container section">
+  <div class="row">
+    <div class="col-auto mr-auto sub-header">
+      <h5 class="text1">VIBRATION ANALYSIS</h5>
+    </div>
+    <div class="col-auto sub-header buttons align-self-end">
+      <button class="btn btn-sm upload"routerLink="/man-vibrate">Single Acoustic Profile</button>
+      <button class="btn  btn-sm reports "routerLink="/man-vibrate-multi" >Multiple Acoustic Profile</button>
+      <!-- <i class="fa fa-cogs config-icon"></i> -->
+      <i class="fa config-icon" [ngClass]="showConfig ? 'active' : null" (click)="toggleConfig()">Config</i>
+
+    </div>
+  </div>
+    <hr class="bighorizon">
+</div>
+
+<div class="container1" *ngIf="!showConfig">
+
+    <div class="row">
+      <div class="col-md-12"  >
+        <figure>
+          <audio
+            title="Multiple Issues in Series"
+            id="myaudio"
+            controls
+            class="col-md-3 audio"
+            src="http://182.156.213.183:8080/qc/combined_changed_final.wav"
+            (play)="selectimage(0)"
+            (pause)="stoped(0)">
+          </audio>
+          <label
+            style="padding-top: 60px;padding-left: 20px;"
+            >Multiple Issues in Series</label>
+
+        </figure>
+        <div class="row">
+<div class="col-md-6">
+                  <table id="myTable"  *ngIf="shows == true"style="width:60%;float:left;display:inline">
+                    <tr>
+                      <td class="defect"></td>
+                      <td>0-5 sec</td>
+                      <td>5-10 sec</td>
+                      <td>10-15 sec</td>
+                      <td>15-20 sec</td>
+                    </tr>
+                    <tr id="normal">
+                      <td class="defect">Normal</td>
+                      <td class= "tdborder" [ngClass]="normal == 00 ? 'greybg' : null"></td>
+                      <td class= "tdborder" [ngClass]="normal == 01 ? 'greybg' : null"></td>
+                      <td class= "tdborder" [ngClass]="normal == 02 ? 'greybg' : null"></td>
+                      <td class= "tdborder" [ngClass]="normal == 03 ? 'greybg' : null"></td>
+                    </tr>
+                    <tr id="pitting">
+                      <td class="defect">Pitting</td>
+                      <td class= "tdborder" [ngClass]="pitting == 00 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="pitting == 01 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="pitting == 02 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="pitting == 03 ? 'greybg1' : null"></td>
+                    </tr>
+                    <tr id="tooth">
+                      <td class="defect">Tooth Fracture</td>
+                      <td class= "tdborder" [ngClass]="tooth == 00 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="tooth == 01 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="tooth == 02 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="tooth == 03 ? 'greybg1' : null"></td>
+                    </tr>
+                    <tr id="wear">
+                      <td class="defect">Wear</td>
+                      <td class= "tdborder" [ngClass]="wear == 00 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="wear == 01 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="wear == 02 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="wear == 03 ? 'greybg1' : null"></td>
+                    </tr>
+                  </table></div>
+                  <div class="col-md-3 ">
+                    <div  id="Multiple Issues in Series" class="chart"></div>
+                    <!-- <canvas id="chart" width="261" height="200"></canvas> -->
+                  </div>
+                </div>
+              </div>
+                  <div class="col-md-12" >
+                    <figure>
+                      <audio
+                        title="Multiple Issues in Parallel"
+                        id="myaudio"
+                        controls
+                        class="col-md-3 audio"
+                        src="http://182.156.213.183:8080/qc/overlaid_final.wav"
+                        (play)="selectimage(1)"
+                        (pause)="stoped(1)">
+                      </audio>
+                      <label
+                        style="padding-top: 60px;padding-left: 20px;"
+                        >Multiple Issues in Parallel</label>
+
+                    </figure>
+                    <div class="row">
+                    <div class="col-md-6">
+                  <table id="myTable" *ngIf="showp == true"style="width:60%;float:left;display:inline">
+                    <tr>
+                      <td class="defect"></td>
+                      <td>0-5 sec</td>
+                      <td>5-10 sec</td>
+                      <td>10-15 sec</td>
+                      <td>15-20 sec</td>
+                    </tr>
+                    <tr id="normal">
+                      <td class="defect">Normal</td>
+                      <td class= "tdborder" [ngClass]="normal == 10 ? 'greybg' : null"></td>
+                      <td class= "tdborder" [ngClass]="normal == 11 ? 'greybg' : null"></td>
+                      <td class= "tdborder" [ngClass]="normal == 12 ? 'greybg' : null"></td>
+                      <td class= "tdborder" [ngClass]="normal == 13 ? 'greybg' : null"></td>
+                    </tr>
+                    <tr id="pitting">
+                      <td class="defect">Pitting</td>
+                      <td class= "tdborder" [ngClass]="pitting == 10 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="pitting == 11 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="pitting == 12 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="pitting == 13 ? 'greybg1' : null"></td>
+                    </tr>
+                    <tr id="tooth">
+                      <td class="defect">Tooth Fracture</td>
+                      <td class= "tdborder" [ngClass]="tooth == 10 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="tooth == 11 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="tooth == 12 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="tooth == 13 ? 'greybg1' : null"></td>
+                    </tr>
+                    <tr id="wear">
+                      <td class="defect">Wear</td>
+                      <td class= "tdborder" [ngClass]="wear == 10 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="wear == 11 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="wear == 12 ? 'greybg1' : null"></td>
+                      <td class= "tdborder" [ngClass]="wear == 13 ? 'greybg1' : null"></td>
+                    </tr>
+                  </table></div>
+                <div class="col-md-3 " *ngIf="DataResult">
+                  <div  id="Multiple Issues in Parallel" class="chart">
+                  <!-- <canvas id="chart" width="261" height="200"></canvas> -->
+                </div></div>
+
+</div>
+
+
+  </div>
+
+</div>
+</div>
+<app-counter-config *ngIf="showConfig"></app-counter-config>

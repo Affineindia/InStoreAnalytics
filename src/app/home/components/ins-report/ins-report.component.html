@@ -1,0 +1,280 @@
+<div class="container section ins-rep">
+  <div class="row">
+    <div class="col-auto mr-auto sub-header">
+      <h5 class="text1">
+        ESTIMATING POS THROUGHPUT
+        <i class="fa fa-info-circle info-icon" title="Estimation of PoS throughput by digitizing PoS receipts to gain insights into product affinity & fast & slow-moving products"></i>
+      </h5>
+    </div>
+    <div class="col-auto sub-header buttons align-self-end">
+      <button class="btn btn-sm upload" routerLink="/ins-pos">UPLOAD</button>
+      <button class="btn btn-sm reports" routerLink="/ins-report">REPORTS</button>
+      <!-- <i class="fa fa-cogs config-icon"></i> -->
+      <i class="fa config-icon" [ngClass]="showConfig ? 'active' : null" (click)="toggleConfig()">Config</i>
+
+    </div>
+  </div>
+  <hr class="bighorizon">
+</div>
+
+
+<div class="container" *ngIf="!showConfig">
+  <div class="selectmenu jumbotron">
+    <div class="row dropdowns">
+    <div class="col-md-3">
+      <label class="header">Time Period: <span > </span> </label>
+      <!-- <input type="date" class="form-control" id="startDate" [(ngModel)]="startDate" /> -->
+
+      <div class="row">
+        <div class="col-md-3">
+          <label> From</label>
+        </div>
+        <div class="col-md-9">
+          <input type="date" class="form-control" id="startDate" [(ngModel)]="startDate" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <label> To</label>
+        </div>
+        <div class="col-md-9">
+          <input type="date" class="form-control" id="endDate" [(ngModel)]="endDate" />
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-3">
+      <label class="header"> State:  </label>
+        <select class="form-control" id="state" [(ngModel)]="state" >
+          <option value="">--Select--</option>
+          <option *ngFor='let lev of statelist' value="{{lev}}">
+            {{ lev }}
+          </option>
+        </select>
+    </div>
+    <div class="col-md-3">
+      <label class="header"> City:  </label>
+          <select class="form-control" id="city" [(ngModel)]="city" >
+            <option value="">--Select--</option>
+            <option *ngFor='let lev of citylist' value="{{lev}}">
+              {{ lev }}
+            </option>
+          </select>
+        </div>
+      <div class="col-md-3">
+        <label class="header"> Product:  </label>
+        <select class="form-control" id="product" [(ngModel)]="product" >
+          <option value="">--Select--</option>
+          <option *ngFor='let lev of productList' value="{{lev.id}}">
+            {{ lev.name }}
+          </option>
+        </select>
+      </div>
+      <div class="col-12 ">
+        <button class="btn btn-default affineblue" style="float: right;" (click)="getfilterData()">Apply</button>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+        <div class="row card-body">
+          <div class="col-md-9">
+            <div class= "title">Total Transactions</div>
+            <span class = "disp_vals golden"> {{totalTransaction}}</span>
+          </div>
+          <div class="col-md-3">
+            <img  class="ip"src="./assets/icn_transaction.png">
+            <!-- <i class="fa fa-chart-bar fa-3x golden "></i> -->
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card">
+        <div class="row card-body">
+          <div class="col-md-9">
+            <div class= "title">Total Revenue</div>
+            <span class = "disp_vals purple"> ₹ {{totalRevenue}}</span>
+          </div>
+          <div class="col-md-3">
+            <img  class="ip"src="./assets/icn_revenue.png">
+            <!-- <i class="fa fa-money-check-alt fa-3x purple ip"></i> -->
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card">
+        <div class="row card-body">
+          <div class="col-md-9">
+            <div class= "title">Total Quantity Sold</div>
+            <span class = "disp_vals green">  {{totalUnitsSold}}</span>
+          </div>
+          <div class="col-md-3">
+            <img  class="ip"src="./assets/icn_sold.png">
+            <!-- <i class="fas fa-industry fa-3x green"></i> -->
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3">
+        <div class="card">
+        <div class="row card-body">
+          <div class="col-md-9">
+            <div class= "title">Avg. Customer Spend</div>
+            <span class = "disp_vals blue"> ₹ {{totalAvgCustomerSpend}}</span>
+          </div>
+          <div class="col-md-3">
+            <img  class="ip"src="./assets/icn_spend.png">
+            <!-- <i class="fas fa-wallet fa-3x blue"></i> -->
+          </div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Second layout -->
+    <div class="card">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="trendchart">
+              <div  id="revenuechart" class="chart">
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class=" customertrend">
+            <div  id="quantitychart" class="chart">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class=" product">
+            <div  id="productchart" class="chart">
+            </div>
+            </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="setcard row">
+        <!-- <div class="col-md-6"> -->
+
+          <div class="col-md-6  card">
+            <label class="aa-field-label1">Top 4 Performing Products</label>
+            <br>
+            <div class="products row">
+
+              <div class="col-md-6 cardmar">
+                <div class="pull-right lp"><span>By Quantity Sold </span></div>
+                <table class="table table-bordered cus-table aa-table table1" >
+                  <thead class="thead-inverse">
+                    <tr>
+                      <th> PRODUCT </th>
+                      <th> UNIT </th>
+                      <th>  %Sale </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <ng-template ngFor let-req [ngForOf]="topFour_ByUnitsSold"; let-i="index">
+                      <tr class="row-{{ i }}" *ngIf="i<4">
+                        <td> {{ req.Product }} </td>
+                          <td> {{req['Units Sold']}}</td>
+                          <td> {{req['Share Percent']}}% </td>
+                      </tr>
+                    </ng-template>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="col-md-6 cardmar">
+                <div class="pull-right"><span>By Revenue </span></div>
+                <table class="table table-bordered cus-table aa-table" >
+                  <thead class="thead-inverse">
+                    <tr>
+                      <th> PRODUCT </th>
+                      <th> UNIT </th>
+                      <th>  %Sale </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <ng-template ngFor let-req [ngForOf]="topFour_ByRevenue"; let-i="index">
+                          <tr class="row-{{ i }}"*ngIf=" i < 4" >
+                            <td> {{ req.Product }} </td>
+                            <td> {{req.Revenue}}</td>
+                            <td> {{req['Share Percent']}}% </td>
+                          </tr>
+                        </ng-template>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 card ">
+            <label class="aa-field-label3">Bottom 4 Performing Products</label>
+            <br>
+            <div class="products row">
+              <div class="col-md-6 cardmar">
+                <div class="pull-right lp"> <span>By Quantity Sold</span> </div>
+                <table class="table table-bordered cus-table aa-table table1" >
+                  <thead class="thead-inverse">
+                    <tr>
+                      <th> PRODUCT </th>
+                      <th> UNIT </th>
+                      <th>  %Sale </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <ng-template ngFor let-req [ngForOf]="bottomFour_ByUnitsSold"; let-i="index">
+                      <tr class="row-{{ i }}" *ngIf=" i < 4">
+                        <td> {{ req.Product }} </td>
+                        <td> {{req['Units Sold']}}</td>
+                        <td> {{req['Share Percent']}}% </td>
+                      </tr>
+                    </ng-template>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-6 cardmar">
+                <div class="pull-right"><span>By Revenue </span></div>
+                <table class="table table-bordered cus-table aa-table" >
+                  <thead class="thead-inverse">
+                    <tr>
+                      <th> PRODUCT </th>
+                      <th> UNIT </th>
+                      <th>  %Sale </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <ng-template ngFor let-req [ngForOf]="bottomFour_ByRevenue"; let-i="index">
+                  <tr class="row-{{ i }}" *ngIf=" i < 4">
+                    <td> {{ req.Product }} </td>
+                    <td> {{req.Revenue}}</td>
+                    <td> {{req['Share Percent']}}% </td>
+                  </tr>
+                </ng-template>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+    </div>
+      </div>
+        <div class="col-md-12 card chartsection">
+          <p class="header1">PRODUCT AFFINITY DIAGRAM</p>
+          <hr>
+          <div id="affinity"  (window:resize)="onResize($event)">
+
+          </div>
+        </div>
+
+  </div>
+
+  <app-counter-config *ngIf="showConfig"></app-counter-config>
