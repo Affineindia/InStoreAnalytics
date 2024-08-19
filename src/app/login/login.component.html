@@ -10,9 +10,8 @@
 				<form novalidate role="form" #f="ngForm" (ngSubmit)="f.valid && onLoggedin(f.value)">
 					<div class="form-content">
 						<div class="form-group un">
-							<input type="text" name="username" [(ngModel)]="username" #un="ngModel"
-							class="form-control input-lg" placeholder="Username"
-							required forbiddenName="" pattern="[A-Za-z0-9]+" autofocus />
+							<input type="text" name="username" [(ngModel)]="username" #un="ngModel" class="form-control input-lg" placeholder="Username"
+							required forbiddenName="" autofocus />
 							<div *ngIf="un.invalid && (un.dirty|| f.submitted)" class="alert alert-danger">
 								<div *ngIf="un.errors.required">
 									Username is required.

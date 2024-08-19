@@ -31,12 +31,12 @@ PROJECT_HOME = os.path.dirname(os.path.realpath(__file__))
 
 @app.route('/testpost', methods = ['POST'])
 def api_root():
-    app.logger.info('Project_Home:' + PROJECT_HOME)
-    return "Test Post"
+		app.logger.info('Project_Home:' + PROJECT_HOME)
+		return "Test Post"
 
 @app.route('/testget', methods = ['GET'])
 def test_get():
-    return "Test Get."
+		return "Test Get."
 
 
 
@@ -45,9 +45,9 @@ Reads the output from the CSV file and returns in JSON format.
 '''
 @app.route('/api/getTrafficSummary', methods = ['GET'])
 def getTrafficSummary():
-  resp = csv_to_dictionary('results/traffic/Combined.csv')
-  # print(resp)
-  return jsonify(resp)
+	resp = csv_to_dictionary('results/traffic/Combined.csv')
+	# print(resp)
+	return jsonify(resp)
 
 
 '''
@@ -55,12 +55,12 @@ Reads the json file with the specified file name.
 '''
 @app.route('/api/checkCounterfeit', methods = ['GET'])
 def checkCounterfeit():
-  filename = request.args.get('filename') + '.json'
-  filepath = 'results/counterfeit/' + filename
-  f = open(filepath,)
-  resp = json.load(f)
-  # print(resp)
-  return jsonify(resp)
+	filename = request.args.get('filename') + '.json'
+	filepath = 'results/counterfeit/' + filename
+	f = open(filepath,)
+	resp = json.load(f)
+	# print(resp)
+	return jsonify(resp)
 
 
 '''
@@ -68,21 +68,21 @@ Reads the json file with the specified file name.
 '''
 @app.route('/api/getEstimatedPos', methods = ['GET'])
 def getEstimatedPos():
-  filename = request.args.get('filename') + '.json'
-  filepath = 'results/pos/' + filename
-  f = open(filepath,)
-  resp = json.load(f)
-  # print(resp)
-  return jsonify(resp)
+	filename = request.args.get('filename') + '.json'
+	filepath = 'results/pos/' + filename
+	f = open(filepath,)
+	resp = json.load(f)
+	# print(resp)
+	return jsonify(resp)
 
 
 @app.route('/api/getShelfInventoryData', methods = ['GET'])
 def getShelfInventoryData():
-  filepath = 'results/shelf/Shelf_Inventory.json'
-  f = open(filepath,)
-  resp = json.load(f)
-  #print(resp)
-  return jsonify(resp)
+	filepath = 'results/shelf/Shelf_Inventory.json'
+	f = open(filepath,)
+	resp = json.load(f)
+	#print(resp)
+	return jsonify(resp)
 
 
 '''
@@ -90,27 +90,55 @@ Reads the json file with the specified file name and filters the data for the sp
 '''
 @app.route('/api/getPosReportData', methods = ['GET'])
 def getPosReportData():
-  fromdate = request.args.get('from')
-  todate = request.args.get('to')
-  state = request.args.get('state')
-  city = request.args.get('city')
-  product = request.args.get('product').replace("_", " ")
-  """
-  products = ['Ambi Pur','Ariel','Head & Shoulders','Pantene','Purex','Tide','whisper']
-  pid = request.args.get('product')
-  if pid != '':
-    pInd = int(pid) - 1
-    product = products[pInd]
-  else:
-    product = ''
-  product = 'Ariel'
-  """
-  filepath = r'results/pos_reports/PG_Global_Hackathon_Mockup_v5_1.xlsx'
-  print(fromdate + ', ' + todate + ', ' + state + ', ' + city + ', ' + product + ', ' + filepath)
-  resp = show_details(fromdate, todate, state, city, product, filepath)
-  # resp = {'fromdatetime': fromdatetime, 'todatetime':todatetime, 'level':level, 'geography':geography, 'product':product}
-  return jsonify(resp)
+	fromdate = request.args.get('from')
+	todate = request.args.get('to')
+	state = request.args.get('state')
+	city = request.args.get('city')
+	product = request.args.get('product').replace("_", " ")
+	"""
+	products = ['Ambi Pur','Ariel','Head & Shoulders','Pantene','Purex','Tide','whisper']
+	pid = request.args.get('product')
+	if pid != '':
+		pInd = int(pid) - 1
+		product = products[pInd]
+	else:
+		product = ''
+	product = 'Ariel'
+	"""
+	filepath = r'results/pos_reports/PG_Global_Hackathon_Mockup_v5_1.xlsx'
+	print(fromdate + ', ' + todate + ', ' + state + ', ' + city + ', ' + product + ', ' + filepath)
+	resp = show_details(fromdate, todate, state, city, product, filepath)
+	# resp = {'fromdatetime': fromdatetime, 'todatetime':todatetime, 'level':level, 'geography':geography, 'product':product}
+	return jsonify(resp)
+
+
+'''
+Reads the json file with the specified file name and filters the data for the specified parameter values.
+'''
+@app.route('/api/authenticate', methods = ['GET'])
+def authenticate():
+	email = request.args.get('email')
+	password = request.args.get('password')
+
+	filepath = r'results/users/users.json'
+
+	# Load the users.json file
+	with open(filepath, 'r') as file:
+		data = json.load(file)
+
+		# Search for the user in the JSON data
+		user = next((user for user in data['users'] if user['email'] == email and user['password'] == password), None)
+
+		if user:
+				# Check if the status is 1
+				if user['status'] == 1:
+						return jsonify({"message": "Authentication successful", "user": user}), 200
+				else:
+						return jsonify({"error": "User is inactive"}), 403
+		else:
+				return jsonify({"error": "Invalid email or password"}), 401
+
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=False)
+		app.run(host='0.0.0.0', debug=False)

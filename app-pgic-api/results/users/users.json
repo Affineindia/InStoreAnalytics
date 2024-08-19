@@ -1,0 +1,6 @@
+{"users": [
+	{"email": "v-manish.mittal@affine.ai", "password": "affine@2024","name":"Manish Mittal","status":1},
+	{"email": "admin", "password": "admin@affine","name":"Admin","status":1},
+	{"email": "guest", "password": "welome@guest","name":"Guest","status":1}
+]
+}
